@@ -1,0 +1,19 @@
+<table class='form' bgcolor='#DCDCDC' align='center' width="450">
+<th align='left'>
+<%= image_tag('softweb-solutions.jpg',:class =>'login_logo') %>
+<h3 class='header' align='center'>Editing meetingroom</h3>
+
+<% form_for(@meetingroom) do |f| %>
+
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p class="button">
+    <%= f.submit 'Update',:action => meetingrooms_path %>
+  </p><br />
+
+<p align='right'><%= link_to 'Back', meetingrooms_path %></p>
+<% end %>
+</th>
+</table>

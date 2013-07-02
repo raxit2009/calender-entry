@@ -1,0 +1,3 @@
+      exists  db/migrate
+      create  db/migrate/20120913125505_add_uset_type_to_users.rb
+wrong number of arguments (1 for 2)

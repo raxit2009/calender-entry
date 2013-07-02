@@ -1,0 +1,27 @@
+<table class='form' bgcolor='#DCDCDC' align='center' width="400">
+<th align='left'>
+  <%= image_tag('softweb-solutions.jpg',:class =>'login_logo') %>
+
+<h1 class='header' align='center'>Log in</h1>
+
+<% form_tag (sessions_path), :class => 'welcome' do %>
+
+<div align='center' class='error_msg'>
+  <p class='error'><%= flash[:notice] %></p>
+</div>
+
+  <p>
+    <%= label_tag :email, 'Email:' %>
+    <%= text_field_tag :email, params[:email] %>
+  </p>
+  <p><br />
+    <%= label_tag :password, 'Password:' %>
+    <%= password_field_tag :password %>
+  </p>
+  <p class="button"><%= submit_tag 'Log In' %></p><br />
+  <p class='signup'><%= link_to "Sign up", signup_path %></p>
+  <p class='forgot_pass'><%= link_to "forgot password?", new_password_reset_path %></p>
+<% end %>
+</th>
+</table>
+

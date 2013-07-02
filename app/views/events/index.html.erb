@@ -1,0 +1,104 @@
+<%= link_to(image_tag('softweb_logo.jpg', :height => "80px",:class =>'header_logo'), root_url) %>
+<div class='welcome_note' style='float:right'>
+
+            <font size='2'>  Welcome to <%= current_user.first_name %>
+              <%= current_user.last_name %></font>
+              <%= link_to "Log out", logout_path %> 
+</div>
+<div align='center' class='error_msg'>
+  <p class='error'><%= flash[:error] %></p>
+</div>
+<h1 class='title' align='center'><font color="blue"> Softweb Solution Office Meetings </font></h1> 
+<input type="hidden" class="meeting_room" name="hdn_meeting_room" value="<%= params['meetingroom'] %>" >
+
+</div>
+<br> 
+
+<script>
+  $(document).ready(function(){
+      // page is now ready, initialize the calendar...
+      $('#calendar').fullCalendar({
+
+          editable: true,
+          header: {
+              left: 'prev,next today search',
+              center: 'title',
+              right: 'month,agendaWeek,agendaDay'
+          },
+          defaultView: 'month',
+          height: 710,
+          slotMinutes: 15,
+          loading: function(bool){
+              if (bool) 
+                  $('#loading').show();
+              else 
+                  $('#loading').hide();
+          },
+
+          events: "/events/get_events/<%=@var%>",
+
+          timeFormat: 'h:mm tt{ - h:mm tt} ',
+          dragOpacity: "0.5",
+
+          eventMouseover: function(event, jsEvent, view) {
+            
+            //$(jsEvent.target).attr('title', event.user.first_name);
+          },
+
+          eventDrop: function(event, dayDelta, minuteDelta, allDay, revertFunc){
+//              if (confirm("Are you sure about this change?")) {
+                  moveEvent(event, dayDelta, minuteDelta, allDay);
+//              }
+//              else {
+//                  revertFunc();
+//              }
+          },
+          
+          eventResize: function(event, dayDelta, minuteDelta, revertFunc){
+//              if (confirm("Are you sure about this change?")) {
+                  resizeEvent(event, dayDelta, minuteDelta);
+//              }
+//              else {
+//                  revertFunc();
+//              }
+          },
+          
+          eventClick: function(event, jsEvent, view){
+              showEventDetails(event);
+          },
+              
+      });
+      
+      
+            (function(){
+                jQuery. ajax({
+                  url: "meetingrooms/collection",
+                  success: function(data) {
+                    $('.meetingroom_selector').append(data);
+                    $('.meetingroom_selector').val($('input[name=hdn_meeting_room]').val());
+                  }
+                });
+            })();
+
+  });
+
+</script>
+<div>
+  <div id='calendar'>
+    <span id = "calendar_view"></span>
+  </div>
+</div>
+<div id = "desc_dialog" style ="display:none;">
+  <div id = "event_desc">
+  </div>
+  <br/>
+  <br/>
+  <div id = "event_actions">
+    <span id = "edit_event"></span>
+    <span id = "delete_event"></span>
+  </div>
+</div>
+<div id = "create_event_dialog" style ="display:none;">
+  <div id = "create_event">
+  </div>
+</div>

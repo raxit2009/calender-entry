@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Softweb Solution Office Meetings Schedule</title>
+    <meta name="author" content="Rakshit Joshi" />
+    <%=javascript_include_tag :defaults %>
+    <%=javascript_include_tag 'fullcalendar', 'gcal', 'application' %>
+    <%=stylesheet_link_tag "style", 'fullcalendar', 'jquery-ui', 'dialog' %>
+  </head>
+  <body class="subpage">
+    <div class="wrapper">
+      <div class="subPageContent">
+          <div class="aplicationContent">
+          <div class="appRightContent">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<table class='form' bgcolor='#DCDCDC' align='center' width="450">
+<th align='left'>
+<%= image_tag('softweb-solutions.jpg',:class =>'login_logo') %>
+
+<h1 class='header' align='center' >Reset Password</h1>
+
+<% form_for @user, :url => password_reset_path(params[:id]) do |f| %>
+<div align='center' class='error_msg'>
+  <p class='error'><%= flash[:notice] %></p>
+</div>
+  <p>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </p><br />
+  <p>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+  </p>
+  <br /><div class="actions"><%= f.submit "Update Password" %></div><br />
+<% end %>
+</th>
+</table>

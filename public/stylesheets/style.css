@@ -1,0 +1,296 @@
+body{
+  font-size: 12px;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  
+}
+
+#loading{
+  position: absolute; 
+  right: 0px; 
+  top: 0px; 
+  background-color: #dd0000; 
+  font-weight:bold;
+  color: white; 
+  margin: 5px; 
+  padding: 3px;
+}
+
+span > div#loading {
+  position: fixed;
+}
+
+h1{
+font-size: 16px;
+}
+
+
+/*  for signup page  */
+    .form
+    {
+
+      border-radius: 20px 20px 20px 20px;
+      moz-box-shadow: 3px 3px 10px #000;
+      box-shadow: 3px 3px 10px #000;
+
+    }
+    .form .header
+    {
+      padding-right: 90px;
+    }
+    .change_logo
+    {
+        
+        margin-top: 5px;
+        margin-left: 13px;
+        moz-box-shadow: 3px 3px 10px #000;
+        box-shadow: 3px 3px 10px #000;
+    }
+    .new_user
+    {
+        margin-top: 10px;
+        background-color: #f3f3f3;
+        border: solid 1px #a1a1a1;
+        padding: 10px;
+        padding-right: 30px;
+        width: 500px;
+        height: 410px;
+        margin-bottom: 15px;
+        margin-left: 13px;
+        margin-right: 13px;
+    }
+    .new_user .error_msg
+    {
+      color:red;
+    }
+    
+    .new_user label
+    {
+        
+        width: 180px;
+        float: left;
+        margin-bottom: 10px;
+    }
+
+    .new_user input
+    {
+        display: block;
+        width: 200px;
+        float: left;
+        margin-bottom: 10px;   
+    }
+
+    .new_user .button
+    {
+      padding-left: 203px
+    }
+    .new_user .login
+    {
+      padding-right: 255px;
+    }
+     
+    .new_user label
+    {
+        text-align: right;
+        padding-right: 20px;
+    }
+
+    .new_user.button
+    {
+      padding-left: 50px;
+    }
+     
+    br
+    {
+        clear: left;
+    }
+
+
+    /*  for login page   */
+    .login_logo
+    {
+        margin-top: 10px;
+        margin-left: 13px;
+        border-radius: 5px 5px 5px 5px;
+        moz-box-shadow: 3px 3px 10px #000;
+        box-shadow: 3px 3px 10px #000;
+    }
+    .welcome
+    {
+        margin-top: 10px;
+        background-color: #f3f3f3;
+        border: solid 1px #a1a1a1;
+        padding: 10px;
+        padding-right: 30px;
+        width: 400px;
+        margin-bottom: 15px;
+        margin-left: 13px;
+        margin-right: 13px;
+
+    }
+    .welcome .error_msg
+    {
+      color:red;
+    }
+    
+    .welcome label 
+    {
+        
+        width: 120px;
+        float: left;
+        margin-bottom: 20px;
+        padding-right: 200px;
+    }
+    .welcome input
+    {
+        display: block;
+        width: 200px;
+        float: left;
+        margin-bottom: 10px; 
+    }
+
+    .welcome .button
+    {
+      padding-left: 143px;
+
+    }
+    .welcome .signup, .welcome .forgot_pass
+    {
+      padding-left: 160px;
+    }
+     
+    .welcome label
+    {
+        text-align: right;
+        padding-right: 20px;
+    }
+    br
+    {
+        clear: left;
+    }
+
+    /*  for password reset form  */
+    .form
+    {
+      border: solid 1px #a1a1a1;
+    }
+    .form .header
+    {
+      padding-right: 90px;
+    }
+
+    .pass_reset
+    {
+        margin-top: 10px;
+        background-color: #f3f3f3;
+        border: solid 1px #a1a1a1;
+        padding: 10px;
+        padding-right: 30px;
+        width: 400px;
+        margin-bottom: 15px;
+        margin-left: 13px;
+        margin-right: 13px;
+    }
+    .pass_reset .error_msg
+    {
+      color:red;
+    }
+    
+    .pass_reset label 
+    {
+        
+        width: 120px;
+        float: left;
+        margin-bottom: 20px;
+        padding-right: 200px;
+    }
+    .pass_reset input
+    {
+        display: block;
+        width: 200px;
+        float: left;
+        margin-bottom: 10px; 
+    }
+
+    .pass_reset .button
+    {
+      padding-left: 143px;
+
+    }  
+    .pass_reset label
+    {
+        text-align: right;
+        padding-right: 20px;
+    }
+    br
+    {
+        clear: left;
+    }
+
+
+
+/*  for password reset form generate  */
+
+.form
+    {
+
+      border-radius: 20px 20px 20px 20px;
+      moz-box-shadow: 3px 3px 10px #000;
+      box-shadow: 3px 3px 10px #000;
+
+    }
+    .form .header
+    {
+      padding-left: 90px;
+    }
+    
+    .edit_user
+    {
+        margin-top: 10px;
+        background-color: #f3f3f3;
+        border: solid 1px #a1a1a1;
+        padding: 10px;
+        padding-right: 30px;
+        width: 400px;
+        margin-bottom: 15px;
+        margin-left: 13px;
+        margin-right: 13px;
+    }
+    .edit_user .error_msg
+    {
+      color:red;
+    }
+    
+    .edit_user label 
+    {
+        
+        width: 120px;
+        float: left;
+        margin-bottom: 5px;
+        padding-right: 200px;
+    }
+    .edit_user input
+    {
+        display: block;
+        width: 200px;
+        float: left;
+        
+    }
+
+    .edit_user .button
+    {
+      padding-left: 143px;
+
+    }  
+    .edit_user label
+    {
+        text-align: right;
+        padding-right: 20px;
+    }
+    .actions
+    {
+        padding-left: 143px;
+    }
+    br
+    {
+        clear: left;
+    }

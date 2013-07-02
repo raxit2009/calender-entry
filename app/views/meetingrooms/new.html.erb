@@ -1,0 +1,22 @@
+<table class='form' bgcolor='#DCDCDC' align='center' width="450">
+<th align='left'>
+<%= image_tag('softweb-solutions.jpg',:class =>'login_logo') %>
+<h2 class='header' align='center'>New meetingroom</h2>
+
+<% form_for @meetingroom do |f| %>
+
+<div align='center' class='error_msg'>
+  <p class='error'><%= flash[:error] %></p>
+</div>
+
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p class="button">
+    <%= f.submit 'Create' %>
+  </p><br />
+  <p align='right'><%= link_to 'Back', meetingrooms_path %></p>
+<% end %>
+</th>
+</table>

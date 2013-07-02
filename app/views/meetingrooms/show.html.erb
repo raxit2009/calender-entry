@@ -1,0 +1,12 @@
+<p>
+  <b>ID:</b>
+  <%=h @meetingroom.id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @meetingroom.name %>
+</p>
+
+<%= link_to 'Edit', edit_meetingroom_path(@meetingroom) %> |
+<%= link_to 'Back', meetingrooms_path %>

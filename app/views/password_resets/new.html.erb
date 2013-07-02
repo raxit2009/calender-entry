@@ -1,0 +1,22 @@
+<table class='form' bgcolor='#DCDCDC' align='center' width="400">
+<th align='left'>
+<%= image_tag('softweb-solutions.jpg',:class =>'login_logo') %>
+
+<h1 class='header' align='center'>Reset Password</h1>
+
+<% form_tag (password_resets_path),:class => 'pass_reset', :method => :post do %>
+
+<div align='center' class='error_msg'>
+  <p class='error'><%= flash[:notice] %></p>
+</div>
+
+  <div class="field">
+    <%= label_tag :email %>
+    <%= text_field_tag :email, params[:email], :size => 25 %>
+  </div>
+  <div class="button"><p align='center'><%= submit_tag "Reset Password" %></p><br/>
+  <p align='right'><%= link_to 'Back', login_path %></p>	
+  </div>
+<% end %>
+</th>
+</table>

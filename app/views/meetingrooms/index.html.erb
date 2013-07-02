@@ -1,0 +1,30 @@
+<table class='form' bgcolor='#DCDCDC' align='center' width="450">
+<th align='left'>
+<title>Softweb Solution Meetingroom Admin</title>
+<div class='header'><%= link_to(image_tag('softweb_meetingroom.jpg', :height => "80px", :class => 'logo_meeting'), root_url) %>
+
+<br /><h3 class='link'><%= link_to 'New meetingroom', new_meetingroom_path %></h3>
+
+<h2 class='heading'>Listing meetingrooms</h2>
+</div>
+<div align='center' class='error_msg'>
+  <p class='error'><%= flash[:error] %></p>
+</div>
+
+<table bgcolor='#f3f3f3' class='inner_table' border='2' align='center' width="900">
+  <tr>
+  	<th align='center' height="50">Id</th>
+    <th align='center'>Name</th>
+    <th align='center'>Edit</th>
+    <th align='center'>Delete</th>
+  </tr>
+
+<% @meetingrooms.each do |meetingroom| %>
+  <tr>
+  	<td align='center' height="30"><%=h meetingroom.id %></td>
+    <td><%=h meetingroom.name %></td>
+    <td align='center'><%= link_to 'Edit', edit_meetingroom_path(meetingroom) %></td>
+    <td align='center'><%= link_to 'Delete', meetingroom, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

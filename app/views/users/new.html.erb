@@ -1,0 +1,41 @@
+<table class='form' bgcolor='#DCDCDC' align='center' width="450">
+<th align='left'>
+<%= image_tag('softweb-solutions.jpg',:class =>'login_logo') %>
+<h1 class='header' align='center'>Sign Up</h1>
+
+<% form_for @user do |f| %>
+
+<div align='center' class='error_msg'>
+  <p class='error'><%= flash[:error] %></p>
+</div>
+
+  <br /><p>
+    <%= f.label :first_name,'First Name:' %>
+    <%= f.text_field :first_name %>
+  </p>
+  <p><br />
+    <%= f.label :last_name, 'Last Name:' %>
+    <%= f.text_field :last_name %>
+  </p>
+  <p><br />
+  	<%= f.label :department, 'Department:' %>
+  	<%= f.select :department,[['ROR', 1],['Php',2],['.Net',3],['iPhone',4],['Android',5]] %>
+  </p>
+  <p>
+    <%= f.label :email, 'Email:' %>
+    <%= f.text_field :email %>
+  </p>
+  <p><br />
+    <%= f.label :password, 'Password:' %>
+    <%= f.password_field :password %>
+  </p>
+  <p><br />
+    <%= f.label :password_confirmation, 'Password Confirmation:' %>
+    <%= f.password_field :password_confirmation %>
+  </p>
+  <p class="button"><%= f.submit 'Create User' %></p><br />
+    <p align='right'><%= link_to 'Back', login_path %></p>
+<% end %>
+</th>
+</table>
+
